@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Greet by name</title>
     <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
-
-</head>
-<body>
-    <p></p>
-</body>
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="Enter Name here" />
+        <button type="button" onclick="greet()">Greet the User</button>
+        <h6 id="greetingMessage"></h6>
+      </form>
+    </main>
+    <footer></footer>
+    <script>
+      "use strict";
+      function greet() {
+        const nameElement = document.getElementById("name");
+        const greetingElement = document.getElementById("greetingMessage");
+        const name = nameElement.value;
+        const message = `Hello ${name}. Welcome and goodbye`;
+        greetingElement.innerHTML = message;
+      }
+    </script>
+  </body>
 </html>
